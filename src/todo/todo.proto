@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package todo;
+
+service TodoController {
+
+    rpc getTodo (Empty) returns (Result);
+    rpc setTodo (TodoInput) returns (Result);
+    
+}
+
+message Empty {}
+
+message TodoInput{
+    string todo = 1;
+}
+
+message Result {
+    string todo = 1;
+} 
